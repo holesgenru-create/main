@@ -1,0 +1,170 @@
+{
+  "Google_Pixel_6": {
+    "ro.build.fingerprint": "google/pixel6/pixel6:14/UQ1A.240205.002/3000007/user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Google_Pixel_7_Pro": {
+    "ro.build.fingerprint": "google/pixel7/pixel7:14/UQ1A.240205.002/3000008/user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Google_Pixel_8": {
+    "ro.build.fingerprint": "google/pixel8/pixel8:14/UQ1A.240205.002/3000009/user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Google_Pixel_5": {
+    "ro.build.fingerprint": "google/pixel5/pixel5:14/UQ1A.240205.002/3000006/user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Google_Pixel_4a": {
+    "ro.build.fingerprint": "google/pixel5/pixel5:14/UQ1A.240205.002/3000006/user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Samsung_S21": {
+    "ro.build.fingerprint": "samsung/s21xx/s21:12/SP1A.210812.016/3000002:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Samsung_S22": {
+    "ro.build.fingerprint": "samsung/s22xx/s22:12/SP1A.210812.016/3000003:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Samsung_S23": {
+    "ro.build.fingerprint": "samsung/s23xx/s23:12/SP1A.210812.016/3000004:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Samsung_S10": {
+    "ro.build.fingerprint": "samsung/s21xx/s21:12/SP1A.210812.016/3000002:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Samsung_A53": {
+    "ro.build.fingerprint": "samsung/s21xx/s21:12/SP1A.210812.016/3000002:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Xiaomi_Mi11": {
+    "ro.build.fingerprint": "Xiaomi/mi11/mi11:12/SKQ1.211006.001/3000012:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 440
+  },
+  "Redmi_Note_10_Pro": {
+    "ro.build.fingerprint": "xiaomi/mojito/mojito:12/SKQ1.211006.001/V13.0.9.0:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 440
+  },
+  "Redmi_Note_12_Pro": {
+    "ro.build.fingerprint": "xiaomi/redmi12/redmi12:13/TKQ1.220905.001/3000017:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 440
+  },
+  "OnePlus_8T": {
+    "ro.build.fingerprint": "OnePlus/op8/op8:13/TKQ1.220905.001/3000020:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "OnePlus_9": {
+    "ro.build.fingerprint": "OnePlus/op9/op9:13/TKQ1.220905.001/3000021:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "OnePlus_10_Pro": {
+    "ro.build.fingerprint": "OnePlus/NE2211/NE2211:13/TKQ1.220905.001/220905:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1440,
+    "height": 3216,
+    "density": 525
+  },
+  "OnePlus_11": {
+    "ro.build.fingerprint": "OnePlus/op11/op11:13/TKQ1.220905.001/3000023:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Xiaomi_13": {
+    "ro.build.fingerprint": "Xiaomi/mi12/mi12:12/SKQ1.211006.001/3000013:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 440
+  },
+  "Samsung_S24": {
+    "ro.build.fingerprint": "samsung/s24xx/s24:12/SP1A.210812.016/3000005:user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Asus_Zenfone_9": {
+    "ro.build.fingerprint": "google/pixel6/pixel6:14/UQ1A.240205.002/3000007/user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  },
+  "Sony_Xperia_1_IV": {
+    "ro.build.fingerprint": "google/pixel7/pixel7:14/UQ1A.240205.002/3000008/user/release-keys",
+    "ro.build.tags": "release-keys",
+    "ro.build.type": "user",
+    "width": 1080,
+    "height": 2400,
+    "density": 420
+  }
+}

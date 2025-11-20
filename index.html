@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Unikit L2 — Панель управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/ui.css">
+    <style>
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px 16px 40px 16px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .tab-button {
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .tab-button.active {
+            background-color: #12b886;
+            color: #ffffff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .controls-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .controls-row input[type="number"],
+        .controls-row input[type="text"],
+        .controls-row select {
+            padding: 6px 8px;
+            border-radius: 4px;
+            border: 1px solid #333;
+            background-color: #111827;
+            color: #e5e7eb;
+            min-width: 80px;
+        }
+
+        .btn-primary {
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            background-color: #12b886;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 10px;
+            background-color: #111827;
+            color: #e5e7eb;
+            font-size: 12px;
+        }
+
+        .log-area {
+            width: 100%;
+            height: 260px;
+            background-color: #020617;
+            color: #e5e7eb;
+            font-family: Consolas, Menlo, Monaco, monospace;
+            padding: 8px;
+            box-sizing: border-box;
+            resize: vertical;
+            white-space: pre-wrap;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .auth-info {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        .field-label {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+    </style>
+    <script defer src="/static/ui.js"></script>
+</head>
+<body>
+<div class="page">
+    <h1 style="margin-bottom: 12px;">Unikit L2 — Панель управления</h1>
+
+    <div class="tabs">
+        <button id="tab-devices" class="tab-button active" type="button">Устройства</button>
+        <button id="tab-auth" class="tab-button" type="button">Авторизация</button>
+    </div>
+
+    <!-- TAB: УСТРОЙСТВА -->
+    <div id="tab-devices-content" class="tab-content active">
+        <div class="section-title">Stage 1 — Создание устройств</div>
+
+        <div class="controls-row">
+            <select id="devices-count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <select id="devices-model"></select>
+
+            <input id="devices-adb-start"
+                   type="number"
+                   value="5555"
+                   min="1"
+                   step="2"
+                   placeholder="ADB start">
+
+            <input id="devices-apk"
+                   type="file"
+                   accept=".apk">
+
+            <button id="devices-start-btn" class="btn-primary" type="button">Создать</button>
+
+            <span class="badge">job: <span id="devices-job-id">-</span></span>
+        </div>
+
+        <textarea id="devices-log" class="log-area" readonly></textarea>
+    </div>
+
+    <!-- TAB: АВТОРИЗАЦИЯ -->
+    <div id="tab-auth-content" class="tab-content">
+        <div class="section-title">Stage 2 — Авторизация в Instagram</div>
+
+        <div class="controls-row" style="margin-bottom: 4px;">
+            <div>
+                <div class="field-label">Файл аккаунтов (.txt, формат: login|password|2fa_key)</div>
+                <input id="auth-file" type="file" accept=".txt">
+            </div>
+        </div>
+
+        <div class="auth-info" id="auth-file-info">
+            Файл не выбран.
+        </div>
+
+        <div style="margin-top: 12px; margin-bottom: 8px;">
+            <div class="field-label">
+                job_id устройств (из Stage 1 — по нему берётся список устройств из data/devices/&lt;job_id&gt;.json):
+            </div>
+            <input id="auth-job-id-input" type="text" placeholder="например, a1b2c3d4"
+                   style="min-width: 220px;">
+        </div>
+
+        <div class="controls-row" style="margin-top: 4px; margin-bottom: 12px;">
+            <button id="auth-start-btn" class="btn-primary" type="button">Запустить авторизацию</button>
+            <span class="badge">auth job: <span id="auth-job-id-label">-</span></span>
+        </div>
+
+        <textarea id="auth-log" class="log-area" readonly></textarea>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+<!doctype html><html><head><meta charset="utf-8"/><title>Unikit L2 — Создание устройств</title>
+<link rel="stylesheet" href="/static/ui.css"/></head><body>
+<div class="wrap"><h1>Unikit L2 — Создание устройств</h1>
+<div class="row">
+<select id="count"><option>1</option></select>
+<select id="model"></select>
+<input id="port" value="5555"/><input type="file" id="apk"/>
+<button id="create">Создать</button> <span>job: <span id="job">-</span></span>
+</div><pre id="log"></pre></div>
+<script>
+const logEl=document.getElementById('log');
+function log(s){logEl.textContent+=s+"\n";logEl.scrollTop=logEl.scrollHeight;}
+async function loadModels(){const r=await fetch('/api/models');const arr=await r.json();const sel=document.getElementById('model');sel.innerHTML='';for(const m of arr){const o=document.createElement('option');o.value=m.model_key;o.textContent=m.ui_label;sel.appendChild(o);}log("[INFO] UI: Список моделей загружен.");}
+async function create(){const fd=new FormData();fd.append('count',document.getElementById('count').value);fd.append('model_key',document.getElementById('model').value);fd.append('port',document.getElementById('port').value);const f=document.getElementById('apk').files[0];if(f){fd.append('apk',f);}const r=await fetch('/api/devices/create',{method:'POST',body:fd});const js=await r.json();document.getElementById('job').textContent=js.job_id;log(`[INFO] UI: Получен ID задачи (${js.job_id}). Ожидание запуска...`);const ws=new WebSocket(`ws://${location.host}/ws/logs?job_id=${js.job_id}`);ws.onmessage=e=>log(e.data);}
+document.getElementById('create').onclick=create;loadModels().then(()=>log("[INFO] UI: Готово к запуску."));
+</script></body></html>
